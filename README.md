@@ -1,23 +1,20 @@
 # Bank Reconciliation Workbook (Excel)
 
 ## About
-An Excel workbook that reconciles a bank statement against a company ledger. Each entry is
-matched with XLOOKUP and classified, and unmatched items are listed in an Exceptions sheet
-with a Probable Reason for follow-up.
+An Excel workbook that reconciles a bank statement against a company ledger. Each entry is matched with XLOOKUP and classified, unmatched items are listed in an Exceptions sheet, and each ledger exception is tagged with a Probable Reason on the Ledger sheet.
 
 ## What it does
 - Matches 100+ bank statement and ledger transactions in both directions using XLOOKUP
 - Classifies every entry as Matched, Amount Mismatch, Missing in Bank, Missing in Ledger or Duplicate
 - Summarises count, amount and net difference per status using COUNTIF and SUMIFS, with a chart
-- Lists all exceptions in one sheet, with a Probable Reason dropdown (e.g. data entry error)
-- Checks that the difference between bank and ledger is fully explained by the exceptions
-  (shows RECONCILED or CHECK)
+- Lists all exceptions in one sheet (Exceptions) and tags each ledger exception with a Probable Reason from a dropdown on the Ledger sheet (e.g. data entry error)
+- Checks that the difference between bank and ledger is fully explained by the exceptions (shows RECONCILED or CHECK)
 
 ## Sheets
 - Bank_Statement : bank-side transactions with match status
-- Ledger : company ledger with match status
+- Ledger : company ledger with match status and a Probable Reason dropdown
 - Summary : status-wise counts, amounts, net difference and chart
-- Exceptions : unmatched items for follow-up
+- Exceptions : unmatched items from both the ledger and the bank, for follow-up
 
 ## Tools
 Microsoft Excel (XLOOKUP, COUNTIF, SUMIFS, Data Validation, Conditional Formatting, Charts)
